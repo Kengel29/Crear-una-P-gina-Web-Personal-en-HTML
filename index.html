@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kendri Miguel Tatis de Jesús | Página personal</title>
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --ink:#000000;
+    --ink-soft:#4D4D4D;
+    --line:#B3B3B3;
+    --accent:#000000;
+    --accent-soft:#EDEDED;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: "Georgia", "Iowan Old Style", serif;
+    line-height:1.65;
+  }
+  .wrap{
+    max-width:840px;
+    margin:0 auto;
+    padding:56px 24px 80px;
+  }
+
+  /* Cabecera con foto */
+  header.hero{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    gap:32px;
+    align-items:end;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:24px;
+    margin-bottom:40px;
+  }
+  .foto{
+    width:150px;
+    height:190px;
+    object-fit:cover;
+    border:1px solid var(--line);
+    background:var(--accent-soft);
+  }
+  .foto-placeholder{
+    width:150px;
+    height:190px;
+    border:1px dashed var(--ink-soft);
+    background:var(--accent-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:Arial, sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding:8px;
+  }
+  h1{
+    font-size:2.1rem;
+    margin:0 0 6px;
+    font-weight:400;
+    letter-spacing:0.3px;
+  }
+  .subtitulo{
+    font-family:Arial, sans-serif;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  ul.ficha{list-style:none;padding:0;margin:14px 0 0;font-family:Arial,sans-serif;font-size:0.95rem;}
+  ul.ficha li{margin-bottom:3px;}
+  a{color:var(--ink);}
+
+  /* Secciones */
+  section{
+    margin-bottom:38px;
+  }
+  section h2{
+    font-family:Arial, sans-serif;
+    font-size:0.78rem;
+    letter-spacing:1.5px;
+    color:var(--accent);
+    text-transform:uppercase;
+    margin:0 0 4px;
+  }
+  section .num{
+    color:var(--ink-soft);
+    margin-right:6px;
+  }
+  section .regla{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:6px 0 16px;
+  }
+  section p{
+    margin:0 0 10px;
+    max-width:70ch;
+  }
+  section ul{
+    margin:0 0 10px;
+    padding-left:20px;
+  }
+  .placeholder{
+    color:var(--ink-soft);
+    background:var(--accent-soft);
+    padding:1px 5px;
+    border-radius:3px;
+  }
+
+  /* Tabla de horario */
+  .horario-wrap{
+    overflow-x:auto;
+  }
+  table.horario{
+    width:100%;
+    border-collapse:collapse;
+    font-family:Arial, sans-serif;
+    font-size:0.88rem;
+  }
+  table.horario caption{
+    text-align:left;
+    font-family:Georgia, serif;
+    font-size:1rem;
+    margin-bottom:8px;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+  table.horario th, table.horario td{
+    border:1px solid var(--line);
+    padding:10px 8px;
+    text-align:center;
+    vertical-align:middle;
+  }
+  table.horario thead th{
+    background:var(--ink);
+    color:var(--paper);
+    font-weight:normal;
+    letter-spacing:0.4px;
+  }
+  table.horario td:first-child, table.horario th:first-child{
+    background:var(--accent-soft);
+    font-weight:bold;
+    white-space:nowrap;
+  }
+  table.horario tbody tr:nth-child(even) td:not(:first-child){
+    background:#F7F7F7;
+  }
+  table.horario td.curso{
+    background:var(--accent-soft);
+    color:var(--ink);
+    text-align:left;
+    padding:8px 10px;
+    vertical-align:middle;
+    border:1px solid var(--ink);
+  }
+  table.horario td.curso .curso-nombre{
+    display:block;
+    font-weight:bold;
+    margin-bottom:3px;
+    line-height:1.25;
+    color:var(--ink);
+  }
+  table.horario td.curso .curso-detalle{
+    display:block;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    line-height:1.3;
+  }
+
+  footer{
+    margin-top:50px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-family:Arial, sans-serif;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:600px){
+    header.hero{
+      grid-template-columns: 110px 1fr;
+    }
+    .foto, .foto-placeholder{ width:110px; height:140px; }
+    h1{ font-size:1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="foto" src="Kendri Foto.jpeg" alt="Foto de Kendri Miguel Tatis de Jesús">
+    <div>
+      <h1>Kendri Miguel Tatis de Jesús</h1>
+      <ul class="ficha">
+        <li><strong>Matrícula:</strong> 100263465</li>
+        <li><strong>Carrera:</strong> Licenciatura en Informática, UASD</li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="biografia">
+    <h2>Breve biografía</h2>
+    <hr class="regla">
+    <p>Nací el 29 de septiembre de 1993 en Santo Domingo Este, República Dominicana. Crecí en una familia de valores cristianos junto a mis padres y mi hermana.</p>
+    <p>Estudio Licenciatura en Informática en la UASD y me he formado en redes, ciberseguridad y programación. Actualmente trabajo como Técnico Coordinador TRE en el Ayuntamiento del Distrito Nacional.</p>
+  </section>
+
+  <section id="asignaturas">
+    <h2>Asignaturas inscritas — Segundo Semestre 2026</h2>
+    <hr class="regla">
+    <ul>
+      <li>INF 5160 – Lenguaje de Programación III</li>
+      <li>INF 5170 – Laboratorio de Lenguaje de Programación III</li>
+      <li>INF 4200 – Base de Datos I</li>
+      <li>INF 4110 – Lenguaje C</li>
+      <li>FIS 1150 – Física para Informática</li>
+      <li>FIS 1160 – Laboratorio de Física para Informática</li>
+    </ul>
+  </section>
+
+  <section id="horario">
+    <h2>Horario de clases</h2>
+    <hr class="regla">
+    <div class="horario-wrap">
+      <table class="horario">
+        <caption>Segundo Semestre 2026 — UASD, Santo Domingo</caption>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:00 – 8:00 AM</td>
+            <td></td>
+            <td></td>
+            <td class="curso" rowspan="2">
+              <span class="curso-nombre">Lab. Lenguaje de Programación III</span>
+              <span class="curso-detalle">INF 5170 · Lab. Informática 103</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8:00 – 9:00 AM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="curso" rowspan="4">
+              <span class="curso-nombre">Lenguaje de Programación III</span>
+              <span class="curso-detalle">INF 5160 · Lab. Informática 103</span>
+            </td>
+          </tr>
+          <tr>
+            <td>9:00 – 10:00 AM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10:00 – 11:00 AM</td>
+            <td></td>
+            <td class="curso">
+              <span class="curso-nombre">Física para Informática</span>
+              <span class="curso-detalle">FIS 1150 · Lab. Física, Sede 214</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11:00 – 12:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12:00 – 1:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1:00 – 2:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2:00 – 3:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3:00 – 4:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4:00 – 5:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="curso" rowspan="2">
+              <span class="curso-nombre">Lab. de Física para Informática</span>
+              <span class="curso-detalle">FIS 1160 · Fac. Ingeniería 218</span>
+            </td>
+            <td class="curso" rowspan="4">
+              <span class="curso-nombre">Base de Datos I</span>
+              <span class="curso-detalle">INF 4200 · Lab. Informática 103</span>
+            </td>
+          </tr>
+          <tr>
+            <td>5:00 – 6:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6:00 – 7:00 PM</td>
+            <td class="curso" rowspan="2">
+              <span class="curso-nombre">Lenguaje C</span>
+              <span class="curso-detalle">INF 4110 · Lab. Informática 103</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7:00 – 8:00 PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Información de contacto</h2>
+    <hr class="regla">
+    <ul>
+      <li>Correo: <a href="mailto:bkl212930@gmail.com">bkl212930@gmail.com</a></li>
+
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>
